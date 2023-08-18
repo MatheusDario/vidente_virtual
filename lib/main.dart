@@ -16,7 +16,25 @@ class VidenteVirtualPage extends StatelessWidget {
           title: Text('Vidente Virtual'),
           backgroundColor: Colors.brown[800],
         ),
-        body: Container(),
+        body: Vidente(),
+      ),
+    );
+  }
+}
+
+class Vidente extends StatefulWidget {
+  const Vidente({super.key});
+
+  @override
+  State<Vidente> createState() => _VidenteState();
+}
+
+class _VidenteState extends State<Vidente> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        child: Image.asset('images/vidente1.png'),
       ),
     );
   }
