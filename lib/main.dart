@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const VidenteVirtualPage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class VidenteVirtualPage extends StatelessWidget {
+  const VidenteVirtualPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Container(color: Colors.blue,),);
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromRGBO(51, 43, 37, 1.0),
+        appBar: AppBar(
+          title: Text('Vidente Virtual'),
+          backgroundColor: Colors.brown[800],
+        ),
+        body: Container(),
+      ),
+    );
   }
 }
-
-
-class LogicaVidenteVirtual extends StatefulWidget {
-  const LogicaVidenteVirtual({super.key});
-
-  @override
-  State<LogicaVidenteVirtual> createState() => _LogicaVidenteVirtualState();
-}
-
-class _LogicaVidenteVirtualState extends State<LogicaVidenteVirtual> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
-
