@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,11 +32,23 @@ class Vidente extends StatefulWidget {
 }
 
 class _VidenteState extends State<Vidente> {
+  int numImgVidente = 1;
+
+  void logicaVidente() {
+    setState(() {
+      numImgVidente = Random().nextInt(5) + 2;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        child: Image.asset('images/vidente1.png'),
+        child: TextButton(
+            onPressed: () {
+              logicaVidente();
+            },
+            child: Image.asset('images/vidente$numImgVidente.png')),
       ),
     );
   }
